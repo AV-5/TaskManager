@@ -12,6 +12,8 @@ app.get("/api", (req, res) => {
 });
 
 import healthcheckRoute from "./router/healthcheck_route.js";
+import authRoute from "./router/auth_route.js";
+app.use("/auth", authRoute);
 app.use("/healthcheck", healthcheckRoute);
 
 export default app;
