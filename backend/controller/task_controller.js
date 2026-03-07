@@ -1,5 +1,5 @@
-import tasks_model from "../models/tasks_model";
-import { task } from "../models/tasks_model";
+import tasks_model from "../models/tasks_model.js";
+import { task } from "../models/tasks_model.js";
 const createTask=async(req,res)=>{
     try {
         const {title,description,user,completed}=req.body;
@@ -65,4 +65,4 @@ const deleteTask=async(req,res)=>{
         })
     }
 }
-export {createTask,getTasks};
+export {createTask,getTasks,deleteTask};
