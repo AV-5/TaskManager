@@ -1,5 +1,4 @@
-import tasks_model from "../models/tasks_model.js";
-import { task } from "../models/tasks_model.js";
+import { task as tasks_model } from "../models/tasks_model.js";
 const createTask=async(req,res)=>{
     try {
         const {title,description,user,completed}=req.body;
@@ -21,7 +20,8 @@ const createTask=async(req,res)=>{
             title,
             description,
             user,
-            completed
+            completed,
+            task
         })
     }
     catch (error) {
@@ -34,7 +34,7 @@ const createTask=async(req,res)=>{
 }
 const getTasks=async(req,res)=>{
     try {
-        const tasks=await tasks_model.findById(task._id);
+        const tasks = await tasks_model.find({ user: req.user.id });
         res.status(200).json({
             success:true,
             message:"Tasks fetched successfully",
