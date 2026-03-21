@@ -80,12 +80,6 @@ MONGO_URI=your_mongodb_connection_string
 # JWT
 JWT_SECRET=your_jwt_secret
 
-# Email (Mailtrap or SMTP)
-MAIL_HOST=smtp.mailtrap.io
-MAIL_PORT=2525
-MAIL_USER=your_mail_user
-MAIL_PASS=your_mail_password
-
 Running the Server
 npm run dev
 
@@ -125,6 +119,42 @@ POST /auth/logout
 Description: Logout user (requires authentication)
 Headers:
 Authorization: Bearer <token>
+
+API Endpoints
+Taskmanager routes
+Create Task
+POST /tasks/create
+Body:
+{
+  "title": "Complete project",
+  "description": "Finish backend API",
+  "priority": "high",
+  "dueDate": "2026-03-30"
+}
+
+Get All Tasks
+GET /tasks
+Delete Task
+DELETE /tasks/delete
+Body:
+{
+  "id": "task_id_here"
+}
+
+Set Priority
+PATCH /tasks/priority
+Body:
+{
+  "id": "task_id_here",
+  "priority": "medium"
+}
+
+Update Status
+PATCH /tasks/status/:id
+Body:
+{
+  "completed": true
+}
 All protected routes require JWT in headers:
 Authorization: Bearer <your_token>
 Base URL:
