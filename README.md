@@ -5,7 +5,7 @@ It includes user registration, login, email verification, protected routes, and 
 
 ---
 
-## Features
+## Features-
 
 - User registration with email verification
 - Secure login using JWT
