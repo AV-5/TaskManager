@@ -17,7 +17,7 @@ It includes user registration, login, email verification, protected routes, and 
 
 ---
 
-## Tech Stack
+## Tech Stack-
 
 - Node.js
 - Express.js
