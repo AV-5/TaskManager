@@ -1,4 +1,4 @@
-# Node.js Authentication Backend
+# Node.js Authentication Backend-
 
 This is a backend authentication system built using Node.js, Express, MongoDB, and JWT.  
 It includes user registration, login, email verification, protected routes, and logout functionality.
