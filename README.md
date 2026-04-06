@@ -15,7 +15,6 @@ It includes user registration, login, email verification, protected routes, and 
 - Health check API
 - Modular folder structure
 
----
 
 ## Tech Stack-
 
@@ -30,7 +29,7 @@ It includes user registration, login, email verification, protected routes, and 
 
 ---
 
-## Project Structure
+## Project Structure-
 backend/
 │
 ├── controller/
