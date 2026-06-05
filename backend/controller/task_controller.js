@@ -118,7 +118,7 @@ const setPriority = async (req, res) => {
 };
 const setStatus = async (req, res) => {
     try {
-        const { id } = req.params;
+        const { id } = req.body;
         const { completed } = req.body;  // expects true or false
 
         if (typeof completed !== "boolean") {
